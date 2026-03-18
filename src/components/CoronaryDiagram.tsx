@@ -69,72 +69,72 @@ export default function CoronaryDiagram({ lesions, onSegmentClick, highlightSegm
         <text x="160" y="32" textAnchor="middle" fontSize="8" fill="#ef4444" fontFamily="system-ui">Aorta</text>
 
         {/* ── LEFT MAIN ── */}
-        {/* LM: from aorta left-side down to bifurcation */}
-        <path d="M 142 32 L 130 55 L 120 70" {...segProps("LM")} />
-        <text x="124" y="53" {...labelProps("LM")}>LM</text>
+        {/* LM: from aorta right-side down to bifurcation (patient's left = viewer's right) */}
+        <path d="M 178 32 L 190 55 L 200 70" {...segProps("LM")} />
+        <text x="196" y="53" {...labelProps("LM")}>LM</text>
 
         {/* ── LAD system ── */}
-        {/* pLAD: bifurcation down */}
-        <path d="M 120 70 L 118 95 L 115 120" {...segProps("pLAD")} />
-        <text x="98" y="97" {...labelProps("pLAD")}>pLAD</text>
+        {/* pLAD: bifurcation down along interventricular groove */}
+        <path d="M 200 70 L 202 95 L 205 120" {...segProps("pLAD")} />
+        <text x="216" y="97" {...labelProps("pLAD")}>pLAD</text>
 
         {/* mLAD */}
-        <path d="M 115 120 L 112 148 L 110 175" {...segProps("mLAD")} />
-        <text x="92" y="150" {...labelProps("mLAD")}>mLAD</text>
+        <path d="M 205 120 L 208 148 L 210 175" {...segProps("mLAD")} />
+        <text x="220" y="150" {...labelProps("mLAD")}>mLAD</text>
 
         {/* dLAD */}
-        <path d="M 110 175 L 108 200 L 106 225" {...segProps("dLAD")} />
-        <text x="87" y="207" {...labelProps("dLAD")}>dLAD</text>
+        <path d="M 210 175 L 212 200 L 214 225" {...segProps("dLAD")} />
+        <text x="224" y="207" {...labelProps("dLAD")}>dLAD</text>
 
-        {/* D1: off pLAD */}
-        <path d="M 117 108 L 95 118 L 75 130" {...segProps("D1")} />
-        <text x="77" y="117" {...labelProps("D1")}>D1</text>
+        {/* D1: off pLAD, branches rightward */}
+        <path d="M 203 108 L 225 118 L 245 130" {...segProps("D1")} />
+        <text x="237" y="117" {...labelProps("D1")}>D1</text>
 
-        {/* D2: off mLAD */}
-        <path d="M 113 158 L 90 166 L 68 174" {...segProps("D2")} />
-        <text x="58" y="168" {...labelProps("D2")}>D2</text>
+        {/* D2: off mLAD, branches rightward */}
+        <path d="M 207 158 L 230 166 L 252 174" {...segProps("D2")} />
+        <text x="254" y="168" {...labelProps("D2")}>D2</text>
 
         {/* ── LCx system ── */}
-        {/* pLCx: from LM bifurcation, sweeping left around AV groove */}
-        <path d="M 120 70 Q 100 75 90 85 Q 80 95 78 112" {...segProps("pLCx")} />
-        <text x="76" y="84" {...labelProps("pLCx")}>pLCx</text>
+        {/* pLCx: from LM bifurcation, sweeping right around AV groove */}
+        <path d="M 200 70 Q 220 75 230 85 Q 240 95 242 112" {...segProps("pLCx")} />
+        <text x="240" y="84" {...labelProps("pLCx")}>pLCx</text>
 
         {/* dLCx */}
-        <path d="M 78 112 Q 76 135 75 155 Q 74 170 73 185" {...segProps("dLCx")} />
-        <text x="55" y="148" {...labelProps("dLCx")}>dLCx</text>
+        <path d="M 242 112 Q 244 135 245 155 Q 246 170 247 185" {...segProps("dLCx")} />
+        <text x="257" y="148" {...labelProps("dLCx")}>dLCx</text>
 
         {/* OM1: off pLCx */}
-        <path d="M 83 98 L 62 105 L 44 118" {...segProps("OM1")} />
-        <text x="37" y="106" {...labelProps("OM1")}>OM1</text>
+        <path d="M 237 98 L 258 105 L 276 118" {...segProps("OM1")} />
+        <text x="275" y="106" {...labelProps("OM1")}>OM1</text>
 
         {/* OM2: off dLCx */}
-        <path d="M 77 145 L 55 152 L 38 162" {...segProps("OM2")} />
-        <text x="23" y="156" {...labelProps("OM2")}>OM2</text>
+        <path d="M 243 145 L 265 152 L 282 162" {...segProps("OM2")} />
+        <text x="284" y="156" {...labelProps("OM2")}>OM2</text>
 
         {/* ── RCA system ── */}
-        {/* pRCA: from aorta right, curves around right AV groove */}
-        <path d="M 178 32 L 190 50 L 200 70 L 210 95" {...segProps("pRCA")} />
-        <text x="202" y="60" {...labelProps("pRCA")}>pRCA</text>
+        {/* pRCA: from aorta left-side, curves around right AV groove (patient's right = viewer's left) */}
+        <path d="M 142 32 L 130 50 L 120 70 L 110 95" {...segProps("pRCA")} />
+        <text x="112" y="60" {...labelProps("pRCA")}>pRCA</text>
 
         {/* mRCA */}
-        <path d="M 210 95 L 215 120 L 220 148" {...segProps("mRCA")} />
-        <text x="220" y="123" {...labelProps("mRCA")}>mRCA</text>
+        <path d="M 110 95 L 105 120 L 100 148" {...segProps("mRCA")} />
+        <text x="82" y="123" {...labelProps("mRCA")}>mRCA</text>
 
         {/* dRCA */}
-        <path d="M 220 148 L 222 175 L 223 200" {...segProps("dRCA")} />
-        <text x="224" y="178" {...labelProps("dRCA")}>dRCA</text>
+        <path d="M 100 148 L 98 175 L 97 200" {...segProps("dRCA")} />
+        <text x="78" y="178" {...labelProps("dRCA")}>dRCA</text>
 
-        {/* PDA: off dRCA, runs in posterior IV groove */}
-        <path d="M 222 195 L 205 215 L 188 232 L 162 245" {...segProps("PDA")} />
-        <text x="193" y="245" {...labelProps("PDA")}>PDA</text>
+        {/* PDA: off dRCA, runs in posterior IV groove toward apex */}
+        <path d="M 98 195 L 115 215 L 132 232 L 158 245" {...segProps("PDA")} />
+        <text x="117" y="245" {...labelProps("PDA")}>PDA</text>
 
         {/* PLB: off dRCA, lateral */}
-        <path d="M 222 200 L 240 215 L 255 228" {...segProps("PLB")} />
-        <text x="248" y="218" {...labelProps("PLB")}>PLB</text>
+        <path d="M 98 200 L 80 215 L 65 228" {...segProps("PLB")} />
+        <text x="50" y="218" {...labelProps("PLB")}>PLB</text>
 
         {/* Heart outline (simplified) */}
         <path
-          d="M 90 70 Q 80 100 75 140 Q 70 180 80 220 Q 100 265 160 295 Q 220 265 240 220 Q 250 180 245 140 Q 240 100 230 70"
+          d="M 230 70 Q 240 100 245 140 Q 250 180 240 220 Q 220 265 160 295 Q 100 265 80 220 Q 70 180 75 140 Q 80 100 90 70"
           fill="none"
           stroke="#e2e8f0"
           strokeWidth="1.5"
